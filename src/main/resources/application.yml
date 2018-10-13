@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        health.enabled: false
+        git:
+          uri: https://github.com/alauda-cloud/config-repo.git
+          force-pull: true
+          searchPaths: '{application}'
+          clone-on-start: true
